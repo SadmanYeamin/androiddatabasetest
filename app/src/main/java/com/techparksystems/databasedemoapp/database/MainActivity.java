@@ -1,4 +1,4 @@
-package com.techparksystems.databasedemoapp.modules.firstpage;
+package com.techparksystems.databasedemoapp.database;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        db = new DatabaseHelper(this).getWritableDatabase();
+
         initUI();
     }
 
@@ -61,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
                     @SuppressLint("Range") String id = cursor.getString(cursor.getColumnIndex(DatabaseHelper.USER_ID));
                     @SuppressLint("Range") String username = cursor.getString(cursor.getColumnIndex(DatabaseHelper.USER_NAME));
                     @SuppressLint("Range") String password = cursor.getString(cursor.getColumnIndex(DatabaseHelper.USER_PASSWORD));
+
+
                     Log.i("Database_tag","I have read ID: "+id+"Username: "+username+"password:"+password);
 
                 }
