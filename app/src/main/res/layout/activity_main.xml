@@ -102,12 +102,12 @@
                 app:startIconTint="@color/colorPrimary">
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/etuserid"
+                    android:id="@+id/student_id"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:cursorVisible="true"
-                    android:hint="User Id"
-                    android:inputType="textPersonName"
+                    android:hint="Student Id"
+                    android:inputType="number"
                     android:textColor="@color/colorPrimary"
                     android:textCursorDrawable="@drawable/cursor_white"
                     android:textSize="@dimen/_10ssp" />
@@ -127,42 +127,52 @@
                 app:startIconTint="@color/colorPrimary">
 
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/etUserName"
+                    android:id="@+id/student_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:cursorVisible="true"
-                    android:hint="User Name"
-                    android:inputType="textPersonName"
+                    android:hint="Student Name"
+                    android:inputType="text"
                     android:textColor="@color/colorPrimary"
                     android:textCursorDrawable="@drawable/cursor_white"
                     android:textSize="@dimen/_10ssp" />
 
             </com.google.android.material.textfield.TextInputLayout>
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="@dimen/_20sdp"-->
+<!--                android:layout_marginRight="@dimen/_20sdp"-->
+<!--                android:layout_marginBottom="@dimen/_8sdp"-->
+<!--                android:textColorHint="@color/colorPrimary"-->
+
+<!--                app:boxStrokeColor="@color/colorPrimary"-->
+<!--                app:hintTextColor="@color/colorPrimary"-->
+<!--                app:startIconTint="@color/colorPrimary">-->
+
+<!--                <androidx.appcompat.widget.AppCompatEditText-->
+<!--                    android:id="@+id/etuserpassword"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:cursorVisible="true"-->
+<!--                    android:hint="User Password"-->
+<!--                    android:inputType="textPersonName"-->
+<!--                    android:textColor="@color/colorPrimary"-->
+<!--                    android:textCursorDrawable="@drawable/cursor_white"-->
+<!--                    android:textSize="@dimen/_10ssp"-->
+<!--                    android:visibility="gone"/>-->
+
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+            <TextView
+                android:id="@+id/result"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/_20sdp"
-                android:layout_marginRight="@dimen/_20sdp"
-                android:layout_marginBottom="@dimen/_8sdp"
-                android:textColorHint="@color/colorPrimary"
-
-                app:boxStrokeColor="@color/colorPrimary"
-                app:hintTextColor="@color/colorPrimary"
-                app:startIconTint="@color/colorPrimary">
-
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/etuserpassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:cursorVisible="true"
-                    android:hint="User Password"
-                    android:inputType="textPersonName"
-                    android:textColor="@color/colorPrimary"
-                    android:textCursorDrawable="@drawable/cursor_white"
-                    android:textSize="@dimen/_10ssp" />
-
-            </com.google.android.material.textfield.TextInputLayout>
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="Result"
+                android:textSize="30dp"
+                />
 
 <!--            <TextView-->
 <!--                android:id="@+id/tvTextComment"-->
@@ -268,6 +278,7 @@
                     android:layout_gravity="center"
                     android:layout_marginEnd="@dimen/_4sdp"
                     android:layout_weight="1"
+                    android:onClick="addStudent"
                     android:backgroundTint="@color/colorPrimary"
                     android:clickable="true"
                     android:foreground="?attr/selectableItemBackground"
@@ -286,6 +297,7 @@
                     android:layout_weight="1"
                     android:backgroundTint="@color/design_default_color_secondary"
                     android:clickable="true"
+                    android:onClick="loadStudents"
                     android:foreground="?attr/selectableItemBackground"
                     android:insetTop="@dimen/_4sdp"
                     android:insetBottom="@dimen/_4sdp"
@@ -313,6 +325,7 @@
                     android:layout_gravity="center"
                     android:layout_marginEnd="@dimen/_4sdp"
                     android:layout_weight="1"
+                    android:onClick="updateStudent"
                     android:backgroundTint="@color/teal_200"
                     android:clickable="true"
                     android:foreground="?attr/selectableItemBackground"
@@ -331,6 +344,7 @@
                     android:layout_marginStart="@dimen/_4sdp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/black"
+                    android:onClick="deleteStudent"
                     android:clickable="true"
                     android:foreground="?attr/selectableItemBackground"
                     android:insetTop="@dimen/_4sdp"
