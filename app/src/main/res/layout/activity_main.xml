@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="@dimen/_16sdp"
+
 
     android:orientation="vertical">
 
@@ -12,12 +12,14 @@
     <ScrollView
         android:id="@+id/scrollview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical">
 
 <!--            <com.google.android.material.textfield.TextInputLayout-->
 <!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"-->
@@ -282,7 +284,7 @@
                     android:layout_gravity="center"
                     android:layout_marginStart="@dimen/_4sdp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/material_on_background_disabled"
+                    android:backgroundTint="@color/design_default_color_secondary"
                     android:clickable="true"
                     android:foreground="?attr/selectableItemBackground"
                     android:insetTop="@dimen/_4sdp"
